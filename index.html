@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dimitra Chrysikou — Portfolio</title>
+<meta name="description" content="Fourth-year Informatics &amp; Telecommunications student building web apps, UI/UX designs and AI projects. Open to internships and freelance work.">
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -76,154 +77,42 @@
   footer { border-top: 1px solid var(--border); padding: 1.5rem 2rem; max-width: 860px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
   footer p { font-size: 12px; color: var(--ink3); font-family: var(--mono); }
   @media (max-width: 600px) { .hero { grid-template-columns: 1fr; } .hero-badges { flex-direction: row; } .contact-grid { grid-template-columns: 1fr; } }
+
+  .project-card.featured { grid-column: 1 / -1; border-color: rgba(180,142,245,0.3); background: linear-gradient(135deg,#1c1530,#160f28); }
+  .project-card.featured h3 { font-size: 1.5rem; }
+  .project-card.featured p { font-size: 14px; max-width: 620px; }
+  .more { margin-top: 1.5rem; font-family: var(--mono); font-size: 12px; }
+  .more a { color: var(--accent); text-decoration: none; }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }
 </style>
 </head>
 <body>
-<nav>
-  <span class="nav-logo">DC /</span>
-  <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
-
-<div class="hero" id="about">
-  <div>
-    <p class="hero-tag">Available for internships &amp; freelance</p>
-    <h1>Dimitra<br><em>Chrysikou</em></h1>
-    <p class="hero-bio">CS student by day, problem-solver by instinct. I'm in my fourth year studying Informatics &amp; Telecommunications at the University of the Peloponnese — somewhere between debugging PHP at midnight and obsessing over pixel-perfect UIs. I build things for the web, and I actually enjoy it.</p>
-    <div class="hero-actions">
-      <a href="#contact" class="btn btn-primary">Get in touch</a>
-      <a href="Bio.pdf" class="btn btn-ghost" download>↓ Download CV</a>
-      <a href="https://github.com/dimitrachrysikou" target="_blank" rel="noopener" class="btn btn-ghost">GitHub →</a>
-    </div>
-  </div>
-  <div class="hero-badges">
-    <div class="hero-badge"><span class="badge-num">4th</span><span class="badge-label">Year</span></div>
-    <div class="hero-badge"><span class="badge-num">6</span><span class="badge-label">Languages</span></div>
-    <div class="hero-badge"><span class="badge-num">4</span><span class="badge-label">Certs</span></div>
-  </div>
+<nav><span class="nav-logo">DC /</span><ul class="nav-links"><li><a href="#about">About</a></li><li><a href="#projects">Projects</a></li><li><a href="#skills">Skills</a></li><li><a href="#certs">Credentials</a></li><li><a href="#contact">Contact</a></li></ul></nav>
+<div class="hero" id="about"><div>
+<p class="hero-tag">Available for internships &amp; freelance</p>
+<h1>Dimitra<br><em>Chrysikou</em></h1>
+<p class="hero-bio">CS student by day, problem-solver by instinct. I'm in my fourth year studying Informatics &amp; Telecommunications at the University of the Peloponnese. I build web apps, design mobile interfaces in Figma, and explore how AI models see the world, somewhere between debugging PHP at midnight and obsessing over pixel-perfect UIs.</p>
+<div class="hero-actions"><a href="#contact" class="btn btn-primary">Get in touch</a><a href="Bio.pdf" class="btn btn-ghost" download>Download CV</a><a href="https://github.com/dimitrachrysikou" target="_blank" rel="noopener" class="btn btn-ghost">GitHub</a></div>
 </div>
-
+<div class="hero-badges"><div class="hero-badge"><span class="badge-num">4th</span><span class="badge-label">Year</span></div><div class="hero-badge"><span class="badge-num">19</span><span class="badge-label">Repos</span></div><div class="hero-badge"><span class="badge-num">20+</span><span class="badge-label">Certs</span></div></div>
+</div>
 <hr class="divider">
-
-<section id="skills">
-  <p class="section-label">Tech stack</p>
-  <h2>What I work with</h2>
-  <div class="skills-grid">
-    <span class="skill-pill">HTML / CSS</span>
-    <span class="skill-pill">PHP</span>
-    <span class="skill-pill">SQL / MySQL</span>
-    <span class="skill-pill">Python</span>
-    <span class="skill-pill">Java</span>
-    <span class="skill-pill">C</span>
-    <span class="skill-pill secondary">Azure AI</span>
-    <span class="skill-pill secondary">Microsoft Excel</span>
-    <span class="skill-pill secondary">XAMPP</span>
-    <span class="skill-pill secondary">Responsive Design</span>
-    <span class="skill-pill secondary">UX / HCI</span>
-    <span class="skill-pill secondary">Formal Methods</span>
-    <span class="skill-pill secondary">Git</span>
-  </div>
+<section id="projects"><p class="section-label">Selected work</p><h2>Projects</h2>
+<div class="projects-grid"><a class="project-card featured" href="https://www.linkedin.com/in/dimi-chrysikou/" target="_blank" rel="noopener"><div class="project-top"><p class="project-type">UI/UX Design</p><span class="github-icon"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></span></div><h3>Fast Courier – Mobile App UI/UX</h3><p>A mobile courier app concept designed in Figma, from user flows to a full set of connected screens. Ongoing since May 2026 as part of my studies at the Department of Informatics &amp; Telecommunications.</p><div class="project-tags"><span class="tag">Figma</span><span class="tag">UI/UX</span><span class="tag">User flows</span><span class="tag">Prototyping</span></div></a><a class="project-card" href="https://github.com/dimitrachrysikou/Volleyball-App" target="_blank" rel="noopener"><div class="project-top"><p class="project-type">Web Development</p><span class="github-icon"><svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></span></div><h3>Volleyball Championship Website</h3><p>Full-stack dynamic web app for managing a volleyball championship: teams, players, fixtures and standings, with full CRUD operations.</p><div class="project-tags"><span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">HTML/CSS</span><span class="tag">XAMPP</span></div></a><a class="project-card" href="https://github.com/dimitrachrysikou/One-Film-Many-Futures" target="_blank" rel="noopener"><div class="project-top"><p class="project-type">AI &amp; Dataset Design</p><span class="github-icon"><svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></span></div><h3>One Film, Many Futures</h3><p>Curated, annotated dataset of 130 frames from the 1959 horror film <em>House on Haunted Hill</em>. Tests how YOLOv8 handles black-and-white gothic cinematography with a custom 15-label taxonomy.</p><div class="project-tags"><span class="tag">Python</span><span class="tag">YOLOv8</span><span class="tag">OpenCV</span><span class="tag">Computer Vision</span></div></a><a class="project-card" href="https://github.com/dimitrachrysikou/SIP-Protocol-PROMELA" target="_blank" rel="noopener"><div class="project-top"><p class="project-type">Formal Methods</p><span class="github-icon"><svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></span></div><h3>SIP Protocol Model</h3><p>Formal verification of the SIP protocol using PROMELA and the SPIN model checker: normal call flow, error cases (busy, rejected, unreachable) and message loss with retransmission.</p><div class="project-tags"><span class="tag">PROMELA</span><span class="tag">SPIN</span><span class="tag">Formal Verification</span></div></a><a class="project-card" href="https://github.com/dimitrachrysikou/A-Star-Algorithm-C-" target="_blank" rel="noopener"><div class="project-top"><p class="project-type">Algorithms</p><span class="github-icon"><svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></span></div><h3>A* Pathfinding Algorithm</h3><p>C implementation of the A* (A-Star) pathfinding algorithm, widely used in AI and game development.</p><div class="project-tags"><span class="tag">C</span><span class="tag">Algorithms</span><span class="tag">Pathfinding</span></div></a><a class="project-card" href="https://github.com/dimitrachrysikou/Star-Wars-Game-C-" target="_blank" rel="noopener"><div class="project-top"><p class="project-type">Game Development</p><span class="github-icon"><svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></span></div><h3>Star Wars Console Game</h3><p>Console-based Star Wars game in C. Navigate Leia through obstacles, stormtroopers and Darth Vader across procedurally generated levels.</p><div class="project-tags"><span class="tag">C</span><span class="tag">Game Logic</span><span class="tag">Console UI</span></div></a><a class="project-card" href="https://github.com/dimitrachrysikou/Billionaires-List-Manager" target="_blank" rel="noopener"><div class="project-top"><p class="project-type">Systems Programming</p><span class="github-icon"><svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></span></div><h3>Billionaires List Manager</h3><p>C program for managing a list of billionaires with full CRUD and persistent storage in .txt files, with search by name, country, activity and net worth.</p><div class="project-tags"><span class="tag">C</span><span class="tag">File I/O</span><span class="tag">Data Management</span></div></a></div>
+<p class="more"><a href="https://github.com/dimitrachrysikou?tab=repositories" target="_blank" rel="noopener">Browse all repositories on GitHub</a></p>
 </section>
-
 <hr class="divider">
-
-<section id="certs">
-  <p class="section-label">Awards &amp; Certifications</p>
-  <h2>Credentials</h2>
-  <div class="certs-grid">
-    <div class="cert-item"><div class="cert-dot"></div><p class="cert-text"><strong>Grow with Google</strong> — Gemini Academy for Students</p></div>
-    <div class="cert-item"><div class="cert-dot"></div><p class="cert-text"><strong>Grow with Google</strong> — Machine Learning &amp; Artificial Intelligence</p></div>
-    <div class="cert-item"><div class="cert-dot"></div><p class="cert-text"><strong>Microsoft</strong> — Azure AI Fundamentals</p></div>
-    <div class="cert-item"><div class="cert-dot"></div><p class="cert-text"><strong>Univators 2.0</strong> | Skilling Future Digital Innovators (Pfizer &amp; Code.Hub) — Machine Learning &amp; AI</p></div>
-  </div>
-</section>
-
+<section id="skills"><p class="section-label">Tech stack</p><h2>What I work with</h2>
+<div class="skills-grid"><span class="skill-pill">HTML / CSS</span><span class="skill-pill">PHP</span><span class="skill-pill">SQL / MySQL</span><span class="skill-pill">Python</span><span class="skill-pill">Java</span><span class="skill-pill">C</span><span class="skill-pill secondary">Figma</span><span class="skill-pill secondary">UX / HCI</span><span class="skill-pill secondary">Responsive Design</span><span class="skill-pill secondary">Azure AI</span><span class="skill-pill secondary">Machine Learning</span><span class="skill-pill secondary">Microsoft Excel</span><span class="skill-pill secondary">Power Fx</span><span class="skill-pill secondary">Agile / Scrum</span><span class="skill-pill secondary">Formal Methods</span><span class="skill-pill secondary">Cybersecurity basics</span><span class="skill-pill secondary">Git</span><span class="skill-pill secondary">XAMPP</span></div></section>
 <hr class="divider">
-
-<section id="projects">
-  <p class="section-label">Selected work</p>
-  <h2>Projects</h2>
-  <div class="projects-grid">
-
-    <a class="project-card" href="https://github.com/dimitrachrysikou/Volleyball-App" target="_blank" rel="noopener">
-      <div class="project-top"><p class="project-type">Web Development</p><span class="github-icon"><svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></span></div>
-      <h3>Volleyball Championship Website</h3>
-      <p>Full-stack dynamic web app for managing a volleyball championship — teams, players, fixtures, and standings. Built with PHP/MySQL with full CRUD operations.</p>
-      <div class="project-tags"><span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">HTML/CSS</span><span class="tag">XAMPP</span></div>
-    </a>
-
-    <a class="project-card" href="https://github.com/dimitrachrysikou/A-Star-Algorithm-C-" target="_blank" rel="noopener">
-      <div class="project-top"><p class="project-type">Algorithms</p><span class="github-icon"><svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></span></div>
-      <h3>A* Pathfinding Algorithm</h3>
-      <p>C implementation of the A* (A-Star) pathfinding algorithm — one of the most efficient graph traversal and search algorithms used in AI and game development.</p>
-      <div class="project-tags"><span class="tag">C</span><span class="tag">Algorithms</span><span class="tag">Pathfinding</span></div>
-    </a>
-
-    <a class="project-card" href="https://github.com/dimitrachrysikou/Billionaires-List-Manager" target="_blank" rel="noopener">
-      <div class="project-top"><p class="project-type">Systems Programming</p><span class="github-icon"><svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></span></div>
-      <h3>Billionaires List Manager</h3>
-      <p>C program for managing a list of billionaires with full CRUD — add, search, delete, and view records, with persistent storage via .txt files and search by name and country.</p>
-      <div class="project-tags"><span class="tag">C</span><span class="tag">File I/O</span><span class="tag">Data Management</span></div>
-    </a>
-
-    <a class="project-card" href="https://github.com/dimitrachrysikou/Star-Wars-Game-C-" target="_blank" rel="noopener">
-      <div class="project-top"><p class="project-type">Game Development</p><span class="github-icon"><svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></span></div>
-      <h3>Star Wars Console Game</h3>
-      <p>Console-based Star Wars game in C. Navigate Leia through obstacles, stormtroopers, and Darth Vader across procedurally generated levels.</p>
-      <div class="project-tags"><span class="tag">C</span><span class="tag">Game Logic</span><span class="tag">Console UI</span></div>
-    </a>
-
-    <a class="project-card" href="https://github.com/dimitrachrysikou/One-Film-Many-Futures" target="_blank" rel="noopener">
-      <div class="project-top"><p class="project-type">AI &amp; Dataset Design</p><span class="github-icon"><svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></span></div>
-      <h3>One Film, Many Futures</h3>
-      <p>Curated annotated dataset of 130 frames from the 1959 horror film <em>House on Haunted Hill</em>. Explored how YOLOv8 handles black-and-white gothic cinematography through a custom 15-label taxonomy.</p>
-      <div class="project-tags"><span class="tag">Python</span><span class="tag">YOLOv8</span><span class="tag">OpenCV</span><span class="tag">Dataset Design</span><span class="tag">Computer Vision</span></div>
-    </a>
-
-    <a class="project-card" href="https://github.com/dimitrachrysikou/SIP-Protocol-PROMELA" target="_blank" rel="noopener">
-      <div class="project-top"><p class="project-type">Formal Methods</p><span class="github-icon"><svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></span></div>
-      <h3>SIP Protocol Model</h3>
-      <p>Formal verification of the SIP protocol using PROMELA and the SPIN model checker. Covers normal call flow, error cases (busy, rejected, unreachable), and message loss scenarios with retransmission logic.</p>
-      <div class="project-tags"><span class="tag">PROMELA</span><span class="tag">SPIN</span><span class="tag">Formal Verification</span><span class="tag">iSpin</span></div>
-    </a>
-
-  </div>
-</section>
-
+<section id="certs"><p class="section-label">Awards &amp; Certifications</p><h2>Credentials</h2>
+<div class="certs-grid"><div class="cert-item"><div class="cert-dot"></div><p class="cert-text"><strong>Microsoft</strong> — Azure AI Fundamentals (Certified)</p></div><div class="cert-item"><div class="cert-dot"></div><p class="cert-text"><strong>Workearly</strong> — AI &amp; Data Science Summer School (SQL for data analysis)</p></div><div class="cert-item"><div class="cert-dot"></div><p class="cert-text"><strong>Univators 2.0</strong> — Skilling Future Digital Innovators (Pfizer &amp; Code.Hub), Machine Learning &amp; AI</p></div><div class="cert-item"><div class="cert-dot"></div><p class="cert-text"><strong>Grow with Google</strong> — Gemini Academy for Students</p></div><div class="cert-item"><div class="cert-dot"></div><p class="cert-text"><strong>University of Helsinki</strong> — Elements of AI: Introduction to AI</p></div><div class="cert-item"><div class="cert-dot"></div><p class="cert-text"><strong>HP LIFE</strong> — Data Science &amp; Analytics</p></div><div class="cert-item"><div class="cert-dot"></div><p class="cert-text"><strong>The Open University</strong> — Introduction to cyber security: stay safe online</p></div></div>
+<p class="more">A selection. The full list is on <a href="https://www.linkedin.com/in/dimi-chrysikou/" target="_blank" rel="noopener">my LinkedIn profile</a>.</p></section>
 <hr class="divider">
-
-<section id="contact">
-  <p class="section-label">Let's talk</p>
-  <h2>Get in touch</h2>
-  <div class="contact-grid">
-    <a href="mailto:chrisikou.dimitra@gmail.com" class="contact-item">
-      <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
-      <div><p class="contact-label">Email</p><p class="contact-value">chrisikou.dimitra@gmail.com</p></div>
-    </a>
-    <a href="https://www.linkedin.com/in/dimi-chrysikou/" target="_blank" rel="noopener" class="contact-item">
-      <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></div>
-      <div><p class="contact-label">LinkedIn</p><p class="contact-value">dimi-chrysikou</p></div>
-    </a>
-    <a href="https://github.com/dimitrachrysikou" target="_blank" rel="noopener" class="contact-item">
-      <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></div>
-      <div><p class="contact-label">GitHub</p><p class="contact-value">dimitrachrysikou</p></div>
-    </a>
-    <a href="Bio.pdf" download class="contact-item">
-      <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg></div>
-      <div><p class="contact-label">Resume</p><p class="contact-value">Download CV (PDF)</p></div>
-    </a>
-  </div>
-</section>
-
+<section id="contact"><p class="section-label">Let's talk</p><h2>Get in touch</h2>
+<div class="contact-grid"><a href="mailto:chrisikou.dimitra@gmail.com" class="contact-item"><div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><div><p class="contact-label">Email</p><p class="contact-value">chrisikou.dimitra@gmail.com</p></div></a><a href="https://www.linkedin.com/in/dimi-chrysikou/" class="contact-item" target="_blank" rel="noopener"><div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></div><div><p class="contact-label">LinkedIn</p><p class="contact-value">dimi-chrysikou</p></div></a><a href="https://github.com/dimitrachrysikou" class="contact-item" target="_blank" rel="noopener"><div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></div><div><p class="contact-label">GitHub</p><p class="contact-value">dimitrachrysikou</p></div></a><a href="Bio.pdf" class="contact-item" download><div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg></div><div><p class="contact-label">Resume</p><p class="contact-value">Download CV (PDF)</p></div></a></div></section>
 <hr class="divider">
-
-<footer>
-  <p>© 2026 Dimitra Chrysikou</p>
-  <p>Built with HTML · CSS · care</p>
-</footer>
+<footer><p>© 2026 Dimitra Chrysikou</p><p>Built with HTML · CSS · care</p></footer>
 </body>
 </html>
